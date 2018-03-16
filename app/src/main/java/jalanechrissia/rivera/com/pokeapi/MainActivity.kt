@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                         val pokeFeed = pokeGson.fromJson(pokeBody, Pokemon::class.java)
 
                         uiThread {
-                            pokemon.add(Pokemon(pokeFeed.name, pokeFeed.sprite))
+                            pokemon.add(Pokemon(pokeFeed.name, pokeFeed.sprites))
                             val adapter = PokeAdapter(pokemon)
                             mRecyclerView!!.adapter = adapter
 

@@ -16,7 +16,7 @@ class PokeAdapter(private val pokemonList: ArrayList<Pokemon>) : RecyclerView.Ad
         val pokePos: Pokemon = pokemonList[position]
         holder!!.view.txtPokemonName.text = pokePos.name
         val pokeImage = holder.view.imgPokemon
-        Picasso.with(holder.view.context).load(pokePos.sprite.front_default).into(pokeImage)
+        Picasso.with(holder.view.context).load(pokePos.sprites.front_default).into(pokeImage)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): CustomViewHolder {
